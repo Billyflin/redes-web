@@ -26,9 +26,9 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      <main className="flex-grow container mx-auto py-6">
+      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="space-y-6">
-          <nav className="flex flex-wrap gap-2">
+          <nav className="flex flex-wrap gap-2 mb-6">
             {sections.map((section) => (
               <Button
                 key={section.name}
@@ -42,7 +42,7 @@ export default function Home() {
             ))}
           </nav>
 
-          <div className="bg-card text-card-foreground p-6 rounded-lg shadow">
+          <div className="bg-card text-card-foreground p-8 rounded-lg shadow-md">
             {ActiveComponent && <ActiveComponent />}
           </div>
         </div>
