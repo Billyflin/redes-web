@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <main className="flex-grow max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="space-y-6">
           <nav className="flex flex-wrap gap-2 mb-6">
             {sections.map((section) => (
