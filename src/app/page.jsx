@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Mail, Play, FileText, Network } from 'lucide-react'
-import WebmailSection from './components/WebmailSection'
-import StreamingSection from './components/StreamingSection'
-import ReportSection from './components/ReportSection'
-import ArchitectureSection from './components/ArchitectureSection'
+import WebmailSection from '@/components/WebmailSection'
+import StreamingSection from '@/components/StreamingSection'
+import ReportSection from '@/components/ReportSection'
+import ArchitectureSection from '@/components/ArchitectureSection'
 
 export default function TallerDeRedes() {
   const [activeTab, setActiveTab] = useState("webmail")
