@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { CopyIcon } from 'lucide-react'
+import {CopyIcon, Shield} from 'lucide-react'
 
 export default function StreamingDescargas() {
   const copyToClipboard = (text: string) => {
@@ -32,6 +32,45 @@ export default function StreamingDescargas() {
             Este resumen incluye los comandos esenciales y configuraciones aplicadas en el EC2 utilizado para el subdominio `stream.andreavet.cl`.
           </CardDescription>
         </CardHeader>
+          <CardContent>
+                    <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center text-lg">
+                <Shield className="mr-2 h-5 w-5" />
+                Credenciales de Prueba
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <span className="font-medium mr-2">Usuario:</span>
+                  <code className="bg-muted px-2 py-1 rounded">profe@andreavet.cl</code>
+                  <Button
+                    className="ml-2"
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => copyToClipboard('profe@andreavet.cl')}
+                  >
+                    <CopyIcon className="h-4 w-4" />
+                  </Button>
+                </div>
+                <div className="flex items-center">
+                  <span className="font-medium mr-2">Contraseña:</span>
+                  <code className="bg-muted px-2 py-1 rounded">Prueba1234</code>
+                  <Button
+                    className="ml-2"
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => copyToClipboard('Prueba1234')}
+                  >
+                    <CopyIcon className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">Acceso a través del webmail: https://mail.andreavet.cl</p>
+            </CardContent>
+          </Card>
+          </CardContent>
       </Card>
 
       <Card>
