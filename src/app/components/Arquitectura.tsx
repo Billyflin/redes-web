@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Mermaid from "@/app/components/Mermaid"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
