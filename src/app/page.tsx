@@ -41,10 +41,7 @@ export default function Home() {
               </Button>
             ))}
           </nav>
-
-          <div className="bg-card text-card-foreground p-8 rounded-lg shadow-md">
             {ActiveComponent && <ActiveComponent />}
-          </div>
         </div>
       </main>
     </div>
