@@ -200,7 +200,7 @@ services:
           3. Gestión de Certificados
         </h3>
         <p className="text-gray-600 mb-4">
-          <strong>Let's Encrypt:</strong> El contenedor genera automáticamente certificados TLS para `mail.andreavet.cl`.
+          <strong>Let&apos;s Encrypt:</strong> El contenedor genera automáticamente certificados TLS para `mail.andreavet.cl`.
           Esto garantiza conexiones seguras para servicios webmail y clientes de correo.
         </p>
       </section>
@@ -217,8 +217,8 @@ services:
           <li><strong>Registro CNAME:</strong> `autodiscover.andreavet.cl` → `mail.andreavet.cl`</li>
           <li><strong>Registros TXT:</strong>
             <ul className="list-disc pl-5 mt-2">
-              <li>SPF: `"v=spf1 a mx ip4:23.20.243.69 ~all"`</li>
-              <li>DMARC: `"v=DMARC1; p=none; rua=mailto:billy@andreavet.cl"`</li>
+              <li>SPF: `&quot;v=spf1 a mx ip4:23.20.243.69 ~all&quot;`</li>
+              <li>DMARC: `&quot;v=DMARC1; p=none; rua=mailto:billy@andreavet.cl&quot;`</li>
             </ul>
           </li>
         </ul>
@@ -292,7 +292,7 @@ services:
           </div>
           <div>
             <h4 className="text-lg font-medium mb-2 text-gray-700">Estado del certificado:</h4>
-            <p className="text-gray-600">Verificado automáticamente por Let's Encrypt.</p>
+            <p className="text-gray-600">Verificado automáticamente por Let&apos;s Encrypt.</p>
           </div>
         </div>
       </section>

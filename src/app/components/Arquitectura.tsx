@@ -102,19 +102,19 @@ export default function Arquitectura() {
               <tr>
                 <td className="py-2 px-4 border-b">TXT</td>
                 <td className="py-2 px-4 border-b">andreavet.cl</td>
-                <td className="py-2 px-4 border-b">"v=spf1 a mx ip4:23.20.243.69 ~all"</td>
+                <td className="py-2 px-4 border-b">&quot;v=spf1 a mx ip4:23.20.243.69 ~all&quot;</td>
                 <td className="py-2 px-4 border-b">3600</td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">TXT</td>
                 <td className="py-2 px-4 border-b">_dmarc.andreavet.cl</td>
-                <td className="py-2 px-4 border-b">"v=DMARC1; p=none; rua=mailto:billy@andreavet.cl"</td>
+                <td className="py-2 px-4 border-b">&quot;v=DMARC1; p=none; rua=mailto:billy@andreavet.cl&quot;</td>
                 <td className="py-2 px-4 border-b">1</td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">TXT</td>
                 <td className="py-2 px-4 border-b">s20241223970._domainkey.andreavet.cl</td>
-                <td className="py-2 px-4 border-b">"k=rsa; p=MIIBIjANBgkqhkiG9..."</td>
+                <td className="py-2 px-4 border-b">&quot;k=rsa; p=MIIBIjANBgkqhkiG9...&quot;</td>
                 <td className="py-2 px-4 border-b">1</td>
               </tr>
             </tbody>
@@ -125,7 +125,7 @@ export default function Arquitectura() {
       <section className="bg-white shadow rounded-lg p-6">
         <h3 className="text-xl font-semibold mb-2 text-gray-700">Diferencias entre Servidores de Correo y Streaming</h3>
         <ul className="list-disc pl-5 text-gray-600">
-          <li>El servidor de correo (mail.andreavet.cl) utiliza un certificado TLS gestionado por <strong>Let's Encrypt</strong>.</li>
+          <li>El servidor de correo (mail.andreavet.cl) utiliza un certificado TLS gestionado por <strong>Let&apos;s Encrypt</strong>.</li>
           <li>El servidor de streaming utiliza un certificado de <strong>Google Trust Services</strong>.</li>
           <li>Estas diferencias en los certificados reflejan las distintas necesidades y configuraciones de cada servicio.</li>
         </ul>
