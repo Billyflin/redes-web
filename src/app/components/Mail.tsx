@@ -1,16 +1,31 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { CopyIcon, MailIcon, Shield, Server, AlertTriangle, CheckCircle2, BarChart2 } from 'lucide-react'
+import {CopyIcon, MailIcon, Shield, Server, AlertTriangle, CheckCircle2, BarChart2, ExternalLink} from 'lucide-react'
+import {toast} from "@/hooks/use-toast";
+
+
 
 export default function Mail() {
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)
-  }
+    const copyToClipboard = (text: string) => {
+        navigator.clipboard.writeText(text).then(() => {
+            toast({
+                title: "Texto copiado al portapapeles." ,
+                description:  text ,
+            })
+        }, (err) => {
+            console.error('Error al copiar texto: ', err);
+            toast({
+                title: "Error",
+                description: "No se pudo copiar el texto al portapapeles.",
+                variant: "destructive",
+            })
+        });
+    }
 
   return (
     <div className="space-y-6">
-      <Card>
+     <Card>
         <CardHeader>
           <CardTitle className="flex items-center">
             <MailIcon className="mr-2 h-6 w-6" />
@@ -55,7 +70,30 @@ export default function Mail() {
                   </Button>
                 </div>
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">Acceso a través del webmail: https://mail.andreavet.cl</p>
+              <div className="mt-4 space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  Acceso a través del webmail:
+                </p>
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="https://mail.andreavet.cl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    https://mail.andreavet.cl
+                  </a>
+                  <Button
+                    onClick={() => window.open('https://mail.andreavet.cl', '_blank')}
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Abrir Webmail
+                  </Button>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </CardContent>
