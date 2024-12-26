@@ -38,12 +38,16 @@ export default function TimeRestrictedButton() {
   const handleClick = async () => {
     setLoading(true)
     try {
-      const response = await fetch('https://labs.vocareum.com/util/vcput.php?a=startaws&stepid=3553566&version=0&mode=s&type=1&vockey=659bc584182c98ad695f682eac2216d29633bfb95c10a497b837e39328a1c90b', {
+      const response = await fetch('https://labs.vocareum.com/util/vcput.php?a=startaws&' +
+          'stepid=3553566&version=0&' +
+          'mode=s&' +
+          'type=1&' +
+          'vockey=e4e2c9a043e1fb9e59cdff1083ee9f70de010dd53cb6fe193fda9f3cded7d9f1', {
         method: 'GET',
         headers: {
           'accept': '*/*',
           'accept-language': 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5,es-CL;q=0.4,es-MX;q=0.3',
-          'cookie': 'userid=1131941; logintoken=659bc584182c98ad695f682eac2216d29633bfb95c10a497b837e39328a1c90b; tokenExpire=1735197102; usertoken=659bc584182c98ad695f682eac2216d29633bfb95c10a497b837e39328a1c90b; t2fausers=659bc584182c98ad695f682eac2216d29633bfb95c10a497b837e39328a1c90b; usingLTI=1; myfolder=104a6b0a9f5eb67016f69c1cacc60d7b; currentcourse=vc_2_0_528a3090org265_353; currentassignment=3553565; currentcourse_id=138947',
+          'cookie': 'logintoken=e4e2c9a043e1fb9e59cdff1083ee9f70de010dd53cb6fe193fda9f3cded7d9f1; usertoken=e4e2c9a043e1fb9e59cdff1083ee9f70de010dd53cb6fe193fda9f3cded7d9f1; userid=1131941; t2fausers=e4e2c9a043e1fb9e59cdff1083ee9f70de010dd53cb6fe193fda9f3cded7d9f1; currentassignment=3553565; currentcourse_id=138947; tokenExpire=1735306373; usingLTI=1; myfolder=104a6b0a9f5eb67016f69c1cacc60d7b; currentcourse=vc_2_0_528a3090org265_353',
           'priority': 'u=1, i',
           'referer': 'https://labs.vocareum.com/main/main.php?m=clabide&mode=s&asnid=3553565&stepid=3553566&hideNavBar=1',
           'sec-ch-ua': '"Microsoft Edge";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
